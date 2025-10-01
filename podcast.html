@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast - IPS Psicología</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fdf6f0;
+            color: #333;
+        }
+
+        header {
+            background-color: #a8dadc;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #1d3557;
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #f1faee;
+        }
+
+        main {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .intro {
+            max-width: 700px;
+            margin: auto;
+            margin-bottom: 40px;
+            background-color: #ffe5ec;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .podcast-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .card {
+            background-color: #faf3e0;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #1d3557;
+        }
+
+        .card iframe {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        footer {
+            background-color: #a8dadc;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Podcast IPS Psicología</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="podcast.html">Podcast</a></li>
+                <li><a href="#">Foros</a></li>
+                <li><a href="#">Audiolibros</a></li>
+                <li><a href="#">Misión</a></li>
+                <li><a href="#">Visión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="intro">
+            <h2>Descubre nuestros Podcast</h2>
+            <p>
+                Aquí podrás visualizar nuestros podcasts en formato de video, 
+                donde compartimos entrevistas, reflexiones y consejos prácticos 
+                sobre psicología y bienestar emocional.
+            </p>
+        </div>
+
+        <div class="podcast-grid">
+            <div class="card">
+                <h3>Episodio 1: Manejo del Estrés</h3>
+                <iframe src="https://www.youtube.com/embed/CfZjdUtWLJo" allowfullscreen></iframe>
+                <p>Exploramos técnicas simples y efectivas para manejar el estrés en la vida diaria.</p>
+            </div>
+
+            <div class="card">
+                <h3>Episodio 2: La importancia de la Salud Mental</h3>
+                <iframe src="https://www.youtube.com/embed/CfZjdUtWLJo" allowfullscreen></iframe>
+                <p>Conversamos con expertos sobre por qué cuidar la salud mental es fundamental.</p>
+            </div>
+
+            <div class="card">
+                <h3>Episodio 3: Mindfulness y Bienestar</h3>
+                <iframe src="https://www.youtube.com/embed/CfZjdUtWLJo" allowfullscreen></iframe>
+                <p>Una guía práctica para comenzar a practicar mindfulness y mejorar tu calidad de vida.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 IPS Psicología - Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>
