@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foro - IPS Psicología</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fdf6f0;
+            color: #333;
+        }
+
+        header {
+            background-color: #a8dadc;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #1d3557;
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #f1faee;
+        }
+
+        main {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .intro {
+            background-color: #ffe5ec;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .foro-lista {
+            display: grid;
+            gap: 20px;
+        }
+
+        .tema {
+            background-color: #faf3e0;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .tema h3 {
+            margin: 0;
+            color: #1d3557;
+        }
+
+        .tema small {
+            color: #666;
+        }
+
+        .tema .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 12px;
+            background-color: #a8dadc;
+            color: #1d3557;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .tema .btn:hover {
+            background-color: #457b9d;
+            color: white;
+        }
+
+        .publicar {
+            margin-top: 40px;
+            background-color: #eaf4f4;
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        .publicar textarea {
+            width: 100%;
+            height: 80px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        .publicar button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #a8dadc;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #1d3557;
+            transition: 0.3s;
+        }
+
+        .publicar button:hover {
+            background-color: #457b9d;
+            color: white;
+        }
+
+        footer {
+            background-color: #a8dadc;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Foro IPS Psicología</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="podcast.html">Podcast</a></li>
+                <li><a href="foro.html">Foros</a></li>
+                <li><a href="#">Audiolibros</a></li>
+                <li><a href="#">Misión y Visión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="intro">
+            <h2>Bienvenido a nuestro Foro</h2>
+            <p>
+                Este es un espacio para compartir experiencias, resolver dudas y conversar 
+                sobre temas de psicología y bienestar. Aquí podrás leer y participar en debates, 
+                así como crear tus propios temas en el futuro.
+            </p>
+        </div>
+
+        <div class="foro-lista">
+            <div class="tema">
+                <h3>¿Cómo manejar la ansiedad en exámenes?</h3>
+                <small>Publicado por Ana · 12 respuestas</small>
+                <p>Un espacio para compartir técnicas y consejos que ayuden a controlar la ansiedad antes y durante un examen.</p>
+                <a href="#" class="btn">Ver tema</a>
+            </div>
+
+            <div class="tema">
+                <h3>Recomendaciones de libros de autoayuda</h3>
+                <small>Publicado por Carlos · 8 respuestas</small>
+                <p>Comparte tus libros favoritos que te han ayudado a crecer emocionalmente y aprender nuevas herramientas.</p>
+                <a href="#" class="btn">Ver tema</a>
+            </div>
+
+            <div class="tema">
+                <h3>¿La terapia online funciona igual que la presencial?</h3>
+                <small>Publicado por María · 15 respuestas</small>
+                <p>Debate sobre la efectividad de la terapia psicológica en modalidad online vs presencial.</p>
+                <a href="#" class="btn">Ver tema</a>
+            </div>
+        </div>
+
+        <div class="publicar">
+            <h3>Publicar un nuevo tema</h3>
+            <textarea placeholder="Escribe aquí tu tema..."></textarea>
+            <button>Publicar</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 IPS Psicología - Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>
