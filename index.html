@@ -8,8 +8,23 @@
     body {
       margin: 0;
       font-family: "Segoe UI", Arial, sans-serif;
-      background-color: #fdf6f0;
+      background: linear-gradient(to bottom right, #eaf6f6, #fdf6f0);
       color: #333;
+      position: relative;
+    }
+
+    /* === Marca de agua con el logo === */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("IMAGENES/logo.png") no-repeat center;
+      background-size: 300px;
+      opacity: 0.08;
+      z-index: -1;
     }
 
     /* ===== HEADER ===== */
@@ -33,6 +48,7 @@
     nav img {
       height: 50px;
       display: block;
+      cursor: pointer;
     }
 
     nav ul {
@@ -58,7 +74,6 @@
 
     /* ===== HERO ===== */
     .hero {
-      background: linear-gradient(to right, #ffe5ec, #faf3e0);
       text-align: center;
       padding: 80px 20px;
     }
@@ -66,6 +81,10 @@
     .hero img {
       width: 120px;
       margin-bottom: 20px;
+      border-radius: 50%;
+      border: 3px solid #457b9d;
+      background-color: #fff;
+      padding: 8px;
     }
 
     .hero h1 {
@@ -95,7 +114,7 @@
 
     .hero .btn:hover { background-color: #1d3557; }
 
-    /* ===== ABOUT / ¿A qué nos dedicamos? ===== */
+    /* ===== ABOUT ===== */
     .about {
       max-width: 1000px;
       margin: 30px auto;
@@ -116,7 +135,7 @@
       color: #1d3557;
     }
 
-    /* ===== SERVICIOS / LO QUE OFRECEMOS ===== */
+    /* ===== SERVICIOS ===== */
     section.services {
       padding: 50px 20px;
       max-width: 1200px;
@@ -136,7 +155,6 @@
       gap: 20px;
     }
 
-    /* Anchor that wraps the whole card */
     a.card-link {
       text-decoration: none;
       color: inherit;
@@ -166,13 +184,7 @@
 
     .card h3 { color: #1d3557; margin: 8px 0 12px; }
     .card p { color: #555; margin: 0 0 12px; flex: 1; }
-
-    /* small visual hint for clicks */
-    .card .chev {
-      margin-top: 14px;
-      color: #457b9d;
-      font-weight: 700;
-    }
+    .card .chev { margin-top: 14px; color: #457b9d; font-weight: 700; }
 
     /* ===== CONTACTO ===== */
     .contacto {
@@ -196,7 +208,7 @@
       color: #1d3557;
     }
 
-    /* Responsive tweaks */
+    /* Responsive */
     @media (max-width: 600px) {
       .hero { padding: 40px 16px; }
       .hero h1 { font-size: 1.8em; }
@@ -209,8 +221,10 @@
   <!-- ===== HEADER ===== -->
   <header>
     <nav>
-      <!-- use your actual logo path -->
-      <img src="IMAGENES/logo.png" alt="Logo Vitalis I.P.S">
+      <!-- Logo clickeable -->
+      <a href="index.html">
+        <img src="IMAGENES/logo.png" alt="Logo Vitalis I.P.S">
+      </a>
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="podcast.html">Podcast</a></li>
@@ -249,12 +263,12 @@
     </div>
   </div>
 
-  <!-- ===== SERVICIOS / LO QUE OFRECEMOS ===== -->
+  <!-- ===== SERVICIOS ===== -->
   <section class="services">
     <h2>Lo que ofrecemos</h2>
 
     <div class="cards">
-      <a href="podcast.html" class="card-link" aria-label="Ir a Podcast - Vitalis I.P.S">
+      <a href="podcast.html" class="card-link">
         <div class="card">
           <div>
             <h3>Podcast</h3>
@@ -264,7 +278,7 @@
         </div>
       </a>
 
-      <a href="foro.html" class="card-link" aria-label="Ir a Foros - Vitalis I.P.S">
+      <a href="foro.html" class="card-link">
         <div class="card">
           <div>
             <h3>Foros</h3>
@@ -274,7 +288,7 @@
         </div>
       </a>
 
-      <a href="audiolibros.html" class="card-link" aria-label="Ir a Audiolibros - Vitalis I.P.S">
+      <a href="audiolibros.html" class="card-link">
         <div class="card">
           <div>
             <h3>Audiolibros</h3>
