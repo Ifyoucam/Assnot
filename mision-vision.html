@@ -1,126 +1,162 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Misión y Visión</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-image: url("IMAGENES/fondo.png");
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            color: #333;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Misión y Visión – Vitalis I.P.S</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(to bottom right, #eaf6f6, #fdf6f0);
+      color: #333;
+      position: relative;
+    }
 
-        header {
-            background-color: rgba(168, 218, 220, 0.9);
-            padding: 20px 0;
-            text-align: center;
-        }
+    /* === Marca de agua con el logo === */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("IMAGENES/logo.png") no-repeat center;
+      background-size: 300px;
+      opacity: 0.08;
+      z-index: -1;
+    }
 
-        header h1 {
-            margin: 0;
-            font-size: 28px;
-            color: #1d3557;
-        }
+    /* ===== HEADER ===== */
+    header {
+      background-color: #a8dadc;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
 
-        nav ul {
-            list-style: none;
-            margin: 15px 0 0 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+      padding: 10px 20px;
+    }
 
-        nav ul li a {
-            text-decoration: none;
-            color: #1d3557;
-            font-weight: bold;
-            padding: 8px 15px;
-            border-radius: 8px;
-            transition: 0.3s;
-        }
+    nav img {
+      height: 50px;
+      cursor: pointer;
+    }
 
-        nav ul li a:hover {
-            background-color: #f1faee;
-        }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
 
-        section {
-            padding: 40px 20px;
-            text-align: center;
-        }
+    nav ul li a {
+      text-decoration: none;
+      color: #1d3557;
+      font-weight: bold;
+      padding: 8px 15px;
+      border-radius: 8px;
+      transition: 0.25s;
+    }
 
-        .card {
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 15px;
-            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
-            margin: 20px auto;
-            padding: 25px;
-            max-width: 700px;
-        }
+    nav ul li a:hover {
+      background-color: #f1faee;
+    }
 
-        .card h2 {
-            color: #1d3557;
-            margin-top: 0;
-        }
+    /* ===== MAIN ===== */
+    main {
+      padding: 50px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
 
-        .card p {
-            font-size: 18px;
-            color: #444;
-            line-height: 1.6;
-        }
+    .card {
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      margin: 30px auto;
+      padding: 30px;
+      max-width: 800px;
+      text-align: center;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
 
-        footer {
-            background-color: rgba(168, 218, 220, 0.9);
-            text-align: center;
-            padding: 15px;
-            margin-top: 40px;
-            color: #1d3557;
-        }
-    </style>
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    }
+
+    .card h2 {
+      color: #1d3557;
+      margin-top: 0;
+    }
+
+    .card p {
+      font-size: 18px;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background-color: #a8dadc;
+      text-align: center;
+      padding: 20px;
+      margin-top: 50px;
+      color: #1d3557;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Misión y Visión</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="podcast.html">Podcast</a></li>
-                <li><a href="foro.html">Foros</a></li>
-                <li><a href="audiolibros.html">Audiolibros</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section>
-        <div class="card">
-            <h2>Misión</h2>
-            <p>
-                En <strong>Vitalis I.P.S</strong>, nuestra misión es brindar un espacio accesible y confiable para compartir 
-                recursos de psicología, fomentando la salud mental y el crecimiento personal 
-                mediante contenidos educativos, acompañamiento y una comunidad de apoyo.
-            </p>
-        </div>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <nav>
+      <a href="index.html">
+        <img src="IMAGENES/headlogo.png" alt="Logo Vitalis I.P.S">
+      </a>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="podcast.html">Podcast</a></li>
+        <li><a href="foro.html">Foros</a></li>
+        <li><a href="audiolibros.html">Audiolibros</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <div class="card">
-            <h2>Visión</h2>
-            <p>
-                En <strong>Vitalis I.P.S</strong> aspiramos a convertirnos en una plataforma líder en el ámbito digital de la psicología, 
-                reconocida por su impacto positivo en la sociedad, ofreciendo información actualizada, 
-                herramientas prácticas y espacios de interacción que contribuyan al bienestar integral.
-            </p>
-        </div>
-    </section>
+  <!-- ===== MAIN ===== -->
+  <main>
+    <div class="card">
+      <h2>Misión</h2>
+      <p>
+        En <strong>Vitalis I.P.S</strong>, nuestra misión es brindar un espacio accesible y confiable para compartir 
+        recursos de psicología, fomentando la salud mental y el crecimiento personal 
+        mediante contenidos educativos, acompañamiento y una comunidad de apoyo.
+      </p>
+    </div>
 
-    <footer>
-        <p>© 2025 Vitalis I.P.S - Todos los derechos reservados</p>
-    </footer>
+    <div class="card">
+      <h2>Visión</h2>
+      <p>
+        En <strong>Vitalis I.P.S</strong> aspiramos a convertirnos en una plataforma líder en el ámbito digital de la psicología, 
+        reconocida por su impacto positivo en la sociedad, ofreciendo información actualizada, 
+        herramientas prácticas y espacios de interacción que contribuyan al bienestar integral.
+      </p>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2025 Vitalis I.P.S - Todos los derechos reservados</p>
+  </footer>
+
 </body>
 </html>
-
-
-
