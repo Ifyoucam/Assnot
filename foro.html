@@ -94,6 +94,12 @@
       margin-bottom: 15px;
     }
 
+    .intro p {
+      font-size: 16px;
+      color: #444;
+      line-height: 1.6;
+    }
+
     .foro-lista {
       display: grid;
       gap: 25px;
@@ -124,6 +130,10 @@
       margin-bottom: 10px;
     }
 
+    .card p {
+      margin-bottom: 15px;
+    }
+
     .card .btn {
       display: inline-block;
       margin-top: 10px;
@@ -146,6 +156,12 @@
       padding: 20px;
       border-radius: 15px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .publicar h3 {
+      margin-top: 0;
+      color: #1d3557;
     }
 
     .publicar textarea {
@@ -160,7 +176,7 @@
 
     .publicar button {
       margin-top: 10px;
-      padding: 10px 15px;
+      padding: 10px 20px;
       background-color: #a8dadc;
       border: none;
       border-radius: 8px;
@@ -182,6 +198,7 @@
       padding: 20px;
       margin-top: 50px;
       color: #1d3557;
+      border-top: 3px solid #1d3557;
     }
   </style>
 </head>
@@ -209,8 +226,8 @@
       <h2>Bienvenido a nuestro Foro</h2>
       <p>
         Este es un espacio para compartir experiencias, resolver dudas y conversar 
-        sobre temas de psicología y bienestar. Aquí podrás leer y participar en debates, 
-        así como crear tus propios temas en el futuro.
+        sobre temas de psicología y bienestar.  
+        Participa en los debates de nuestra comunidad y enriquece el aprendizaje mutuo.
       </p>
     </div>
 
@@ -240,6 +257,7 @@
     <div class="publicar">
       <h3>Publicar un nuevo tema</h3>
       <textarea placeholder="Escribe aquí tu tema..."></textarea>
+      <br>
       <button>Publicar</button>
     </div>
   </main>
