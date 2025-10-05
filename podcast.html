@@ -8,14 +8,30 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #fdf6f0;
+            background-image: url("IMAGENES/fondo.png"); /* Fondo con la imagen */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             color: #333;
         }
 
         header {
-            background-color: #a8dadc;
-            padding: 15px 0;
+            background-color: rgba(168, 218, 220, 0.9);
+            padding: 20px 0;
             text-align: center;
+        }
+
+        /* Estilo mejorado del logo */
+        header img {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            background: #ffffffcc;
+            border-radius: 50%;
+            padding: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            display: block;
+            margin: 0 auto 15px auto;
         }
 
         nav ul {
@@ -49,7 +65,7 @@
             max-width: 700px;
             margin: auto;
             margin-bottom: 40px;
-            background-color: #ffe5ec;
+            background-color: rgba(255, 229, 236, 0.9);
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -64,7 +80,7 @@
         }
 
         .card {
-            background-color: #faf3e0;
+            background-color: rgba(250, 243, 224, 0.9);
             border-radius: 15px;
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -84,7 +100,7 @@
         }
 
         footer {
-            background-color: #a8dadc;
+            background-color: rgba(168, 218, 220, 0.9);
             text-align: center;
             padding: 15px;
             margin-top: 40px;
@@ -94,6 +110,8 @@
 <body>
 
     <header>
+        <!-- Logo de la IPS -->
+        <img src="IMAGENES/logo.png" alt="Logo IPS">
         <h1>Podcast IPS Psicología</h1>
         <nav>
             <ul>
@@ -142,4 +160,5 @@
 
 </body>
 </html>
+
 
