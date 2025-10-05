@@ -13,7 +13,7 @@
       position: relative;
     }
 
-    /* === Imagen de fondo con logo === */
+    /* === Marca de agua con el logo === */
     body::before {
       content: "";
       position: fixed;
@@ -22,8 +22,8 @@
       width: 100%;
       height: 100%;
       background: url("IMAGENES/logo.png") no-repeat center;
-      background-size: 450px;
-      opacity: 0.06; /* Transparencia más suave */
+      background-size: 300px;
+      opacity: 0.08;
       z-index: -1;
     }
 
@@ -49,10 +49,6 @@
       height: 50px;
       display: block;
       cursor: pointer;
-      border-radius: 50%;        /* redondear logo */
-      border: 3px solid #457b9d; /* borde azul */
-      background-color: #fff;    /* fondo blanco detrás */
-      padding: 3px;
     }
 
     nav ul {
@@ -221,3 +217,103 @@
   </style>
 </head>
 <body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <nav>
+      <!-- Logo clickeable -->
+      <a href="index.html">
+        <img src="IMAGENES/logo.png" alt="Logo Vitalis I.P.S">
+      </a>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="podcast.html">Podcast</a></li>
+        <li><a href="foro.html">Foros</a></li>
+        <li><a href="audiolibros.html">Audiolibros</a></li>
+        <li><a href="mision-vision.html">Misión y Visión</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <img src="IMAGENES/logo.png" alt="Vitalis I.P.S">
+    <h1>Bienvenido a Vitalis I.P.S</h1>
+    <p>
+      Un espacio de acompañamiento psicológico pensado para tu bienestar, crecimiento y equilibrio emocional.
+      En Vitalis I.P.S ofrecemos recursos, acompañamiento y herramientas prácticas para fortalecer la salud mental.
+    </p>
+    <a href="mision-vision.html" class="btn">Conoce nuestra misión</a>
+  </section>
+
+  <!-- ===== ¿A QUÉ NOS DEDICAMOS? ===== -->
+  <div class="about">
+    <div class="about-card" aria-labelledby="about-title">
+      <h2 id="about-title">¿A qué nos dedicamos?</h2>
+      <p>
+        En <strong>Vitalis I.P.S</strong> brindamos apoyo psicológico integral: atención y orientación,
+        recursos educativos (podcasts y audiolibros), y espacios de comunidad (foros). 
+        Trabajamos con estrategias basadas en evidencia para manejo del estrés, ansiedad, 
+        promoción de la resiliencia y acompañamiento en procesos de crecimiento personal.
+      </p>
+      <p>
+        Ofrecemos servicios tanto presenciales como remotos, contenidos gratuitos para la comunidad
+        y espacios seguros para compartir y aprender.
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== SERVICIOS ===== -->
+  <section class="services">
+    <h2>Lo que ofrecemos</h2>
+
+    <div class="cards">
+      <a href="podcast.html" class="card-link">
+        <div class="card">
+          <div>
+            <h3>Podcast</h3>
+            <p>Entrevistas, reflexiones y herramientas prácticas para el bienestar emocional.</p>
+          </div>
+          <div class="chev">Ir a Podcast →</div>
+        </div>
+      </a>
+
+      <a href="foro.html" class="card-link">
+        <div class="card">
+          <div>
+            <h3>Foros</h3>
+            <p>Espacios de diálogo y apoyo comunitario para compartir experiencias y dudas.</p>
+          </div>
+          <div class="chev">Ir a Foros →</div>
+        </div>
+      </a>
+
+      <a href="audiolibros.html" class="card-link">
+        <div class="card">
+          <div>
+            <h3>Audiolibros</h3>
+            <p>Audiocontenido pensado para acompañar procesos de aprendizaje y autoreflexión.</p>
+          </div>
+          <div class="chev">Ir a Audiolibros →</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+  <section>
+    <h2 style="text-align:center; color:#1d3557;">Contáctanos</h2>
+    <div class="contacto">
+      <p><strong>Teléfono:</strong> +57 300 000 0000</p>
+      <p><strong>Email:</strong> contacto@vitalis.com</p>
+      <p><strong>Ubicación:</strong> Calle 123 #45-67, Bogotá, Colombia</p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2025 Vitalis I.P.S - Todos los derechos reservados</p>
+  </footer>
+
+</body>
+</html>
