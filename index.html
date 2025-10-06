@@ -135,7 +135,7 @@
       color: #1d3557;
     }
 
-    /* ===== SERVICIOS ===== */
+    /* ===== SERVICIOS (sección superior "Lo que ofrecemos") ===== */
     section.services {
       padding: 50px 20px;
       max-width: 1200px;
@@ -380,7 +380,7 @@
     </div>
   </div>
 
-  <!-- ===== SERVICIOS ===== -->
+  <!-- ===== SERVICIOS (tarjetas principales) ===== -->
   <section class="services">
     <h2>Lo que ofrecemos</h2>
     <div class="cards">
@@ -415,218 +415,231 @@
       </a>
     </div>
   </section>
-<!-- 🟢 SECCIÓN NUESTROS SERVICIOS -->
-<section id="servicios" class="servicios-section">
-  <h2>Nuestros Servicios</h2>
-  <p class="descripcion-servicios">
-  </p>
-<div class="paquetes-container">
-    <!-- Evaluacion -->
-    <div class="paquete-card" onclick="abrirContacto('Leve')">
-      <h3>Evaluacion Diagnostica</h3>
-      <ul>
-        <li>Entrevista Semiestructura</li>
-        <li>Pruebas y Test estandarizados</li>
-      </ul>
-    </div>
-  
+
+  <!-- 🟢 SECCIÓN NUESTROS SERVICIOS -->
+  <section id="servicios" class="servicios-section">
+    <h2>Nuestros Servicios</h2>
+    <p class="descripcion-servicios">
+    </p>
   <div class="paquetes-container">
-    <!-- Paquete leve -->
-    <div class="paquete-card" onclick="abrirContacto('Leve')">
-      <h3>Paquete Leve</h3>
-      <ul>
-        <li>Psicoeducacion basica sobre el cancer infantil</li>
-        <li>Talleres grupales sobre mindfullness</li>
-        <li>Guia digital con estrategias de autocuidado</li>
-        <li>Red de apoyo social</li>
-      </ul>
-    </div>
+      <!-- Evaluacion -->
+      <div class="paquete-card" onclick="abrirContacto('Leve')">
+        <h3>Evaluacion Diagnostica</h3>
+        <ul>
+          <li>Entrevista Semiestructura</li>
+          <li>Pruebas y Test estandarizados</li>
+        </ul>
+      </div>
+    
+    <div class="paquetes-container">
+      <!-- Paquete leve -->
+      <div class="paquete-card" onclick="abrirContacto('Leve')">
+        <h3>Paquete Leve</h3>
+        <ul>
+          <li>Psicoeducacion basica sobre el cancer infantil</li>
+          <li>Talleres grupales sobre mindfullness</li>
+          <li>Guia digital con estrategias de autocuidado</li>
+          <li>Red de apoyo social</li>
+        </ul>
+      </div>
 
-    <!-- Paquete moderado -->
-    <div class="paquete-card" onclick="abrirContacto('Moderado')">
-      <h3>Paquete Moderado</h3>
-      <ul>
-        <li>Terapia indivual de 6 a 8 secciones</li>
-        <li>Ejercicio de relajación y respiración</li>
-        <li>Grupo de apoyo estructurado con acompañamiento profesional</li>
-        <li>Monitoreo del progreso mediante pruebas Psicologicas</li>
-      </ul>
-    </div>
+      <!-- Paquete moderado -->
+      <div class="paquete-card" onclick="abrirContacto('Moderado')">
+        <h3>Paquete Moderado</h3>
+        <ul>
+          <li>Terapia indivual de 6 a 8 secciones</li>
+          <li>Ejercicio de relajación y respiración</li>
+          <li>Grupo de apoyo estructurado con acompañamiento profesional</li>
+          <li>Monitoreo del progreso mediante pruebas Psicologicas</li>
+        </ul>
+      </div>
 
-    <!-- Paquete severo -->
-    <div class="paquete-card" onclick="abrirContacto('Severo')">
-      <h3>Paquete Severo</h3>
-      <ul>
-        <li>Procesos de intervensión Psicologicas individual</li>
-        <li>Secciones de atención en crisis</li>
-        <li>Talleres especializados en afrontamiento del duelo y preparación emocional</li>
-      </ul>
+      <!-- Paquete severo -->
+      <div class="paquete-card" onclick="abrirContacto('Severo')">
+        <h3>Paquete Severo</h3>
+        <ul>
+          <li>Procesos de intervensión Psicologicas individual</li>
+          <li>Secciones de atención en crisis</li>
+          <li>Talleres especializados en afrontamiento del duelo y preparación emocional</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🟣 MODAL DE CONTACTO -->
+  <div id="modal-contacto" class="modal">
+    <div class="modal-content">
+      <span class="cerrar" onclick="cerrarContacto()">&times;</span>
+      <h3 id="titulo-modal">Contacto</h3>
+      <p>Gracias por tu interés en nuestro paquete. Puedes comunicarte con nosotros a través de:</p>
+      <p><b>Teléfono:</b> <a href="tel:+573001234567">+57 300 123 4567</a></p>
+      <p><b>Correo:</b> <a href="mailto:contacto@vitalisips.com">contacto@vitalisips.com</a></p>
+      <a id="whatsapp-link" class="btn-whatsapp" target="_blank">
+        💬 Escribir por WhatsApp
+      </a>
     </div>
   </div>
-</section>
 
-<!-- 🟣 MODAL DE CONTACTO -->
-<div id="modal-contacto" class="modal">
-  <div class="modal-content">
-    <span class="cerrar" onclick="cerrarContacto()">&times;</span>
-    <h3 id="titulo-modal">Contacto</h3>
-    <p>Gracias por tu interés en nuestro paquete. Puedes comunicarte con nosotros a través de:</p>
-    <p><b>Teléfono:</b> <a href="tel:+573001234567">+57 300 123 4567</a></p>
-    <p><b>Correo:</b> <a href="mailto:contacto@vitalisips.com">contacto@vitalisips.com</a></p>
-    <a id="whatsapp-link" class="btn-whatsapp" target="_blank">
-      💬 Escribir por WhatsApp
-    </a>
-  </div>
-</div>
-
-<!-- 💅 ESTILOS DE LA SECCIÓN -->
-<style>
-  .servicios-section {
-    text-align: center;
-    padding: 60px 20px;
-    background-color: #f6f9fc;
-    font-family: Arial, sans-serif;
-  }
-
-  .servicios-section h2 {
-    font-size: 2rem;
-    color: #0078d7;
-    margin-bottom: 10px;
-  }
-
-  .descripcion-servicios {
-    max-width: 600px;
-    margin: 0 auto 40px;
-    color: #444;
-  }
-
-  .paquetes-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-
-  .paquete-card {
-    background: white;
-    width: 280px;
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-
-  .paquete-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 14px rgba(0,0,0,0.2);
-  }
-
-  .paquete-card h3 {
-    color: #0078d7;
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-  }
-
-  .paquete-card ul {
-    list-style: none;
-    padding: 0;
-    text-align: left;
-  }
-
-  .paquete-card li {
-    margin-bottom: 10px;
-    color: #333;
-    position: relative;
-    padding-left: 20px;
-  }
-
-  .paquete-card li::before {
-    content: "✔";
-    position: absolute;
-    left: 0;
-    color: #0078d7;
-  }
-
-  /* Modal */
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 99999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
-  }
-
-  .modal-content {
-    background: white;
-    margin: 10% auto;
-    padding: 30px;
-    border-radius: 15px;
-    width: 90%;
-    max-width: 400px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  }
-
-  .modal-content h3 {
-    color: #0078d7;
-    margin-bottom: 10px;
-  }
-
-  .cerrar {
-    float: right;
-    font-size: 24px;
-    cursor: pointer;
-    color: #999;
-  }
-
-  .cerrar:hover {
-    color: #0078d7;
-  }
-
-  .btn-whatsapp {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #25d366;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background 0.3s;
-  }
-
-  .btn-whatsapp:hover {
-    background-color: #1ebe5d;
-  }
-</style>
-
-<!-- ⚙️ FUNCIONALIDAD -->
-<script>
-  function abrirContacto(paquete) {
-    document.getElementById('modal-contacto').style.display = 'block';
-    document.getElementById('titulo-modal').innerText = `Contacto - Paquete ${paquete}`;
-
-    // Cambia este número al de Vitalis I.P.S
-    const numeroWhatsApp = '573001234567';
-    const mensaje = `Hola, estoy interesado en el paquete ${paquete} de Vitalis I.P.S`;
-    const enlace = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
-    document.getElementById('whatsapp-link').setAttribute('href', enlace);
-  }
-
-  function cerrarContacto() {
-    document.getElementById('modal-contacto').style.display = 'none';
-  }
-
-  window.onclick = function(event) {
-    const modal = document.getElementById('modal-contacto');
-    if (event.target === modal) {
-      modal.style.display = "none";
+  <!-- 💅 ESTILOS DE LA SECCIÓN UNIFICADOS (solo para "Nuestros Servicios") -->
+  <style>
+    /* Unificamos visualmente la sección "Nuestros Servicios" con el resto de la página */
+    .servicios-section {
+      padding: 50px 20px;
+      max-width: 1200px;
+      margin: 10px auto 60px;
+      text-align: center;
     }
-  }
-</script>
+
+    .servicios-section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2em;
+      color: #1d3557;
+    }
+
+    .descripcion-servicios {
+      max-width: 750px;
+      margin: 0 auto 40px;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .paquetes-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .paquete-card {
+      background-color: #fff;
+      padding: 22px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.25s, box-shadow 0.25s;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 160px;
+    }
+
+    .paquete-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    }
+
+    .paquete-card h3 {
+      color: #1d3557;
+      margin-bottom: 15px;
+      font-size: 1.2em;
+    }
+
+    .paquete-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      color: #555;
+      text-align: left;
+      flex: 1;
+    }
+
+    .paquete-card li {
+      margin-bottom: 10px;
+      color: #444;
+      position: relative;
+      padding-left: 20px;
+      line-height: 1.5;
+    }
+
+    .paquete-card li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #457b9d;
+      font-weight: bold;
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 99999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    .modal-content {
+      background: #fff;
+      margin: 10% auto;
+      padding: 30px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .modal-content h3 {
+      color: #1d3557;
+      margin-bottom: 10px;
+    }
+
+    .cerrar {
+      float: right;
+      font-size: 24px;
+      cursor: pointer;
+      color: #999;
+    }
+
+    .cerrar:hover {
+      color: #1d3557;
+    }
+
+    .btn-whatsapp {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #25d366;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s;
+      font-weight: bold;
+    }
+
+    .btn-whatsapp:hover {
+      background-color: #1ebe5d;
+    }
+  </style>
+
+  <!-- ⚙️ FUNCIONALIDAD -->
+  <script>
+    function abrirContacto(paquete) {
+      document.getElementById('modal-contacto').style.display = 'block';
+      document.getElementById('titulo-modal').innerText = `Contacto - Paquete ${paquete}`;
+
+      // Cambia este número al de Vitalis I.P.S
+      const numeroWhatsApp = '573001234567';
+      const mensaje = `Hola, estoy interesado en el paquete ${paquete} de Vitalis I.P.S`;
+      const enlace = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+      document.getElementById('whatsapp-link').setAttribute('href', enlace);
+    }
+
+    function cerrarContacto() {
+      document.getElementById('modal-contacto').style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById('modal-contacto');
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
 
   <!-- ===== CONTACTO ===== -->
   <section>
@@ -726,8 +739,3 @@
 
 </body>
 </html>
-
-
-
-
-
