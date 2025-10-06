@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Audiolibros - Vitalis I.P.S</title>
+  <title>Cuidados Paliativos - Vitalis I.P.S</title>
   <style>
     body {
       margin: 0;
@@ -13,7 +13,7 @@
       position: relative;
     }
 
-    /* === Marca de agua con el logo === */
+    /* === Marca de agua === */
     body::before {
       content: "";
       position: fixed;
@@ -73,7 +73,7 @@
 
     /* ===== INTRO ===== */
     .intro {
-      max-width: 800px;
+      max-width: 850px;
       margin: 40px auto;
       background-color: #ffe5ec;
       padding: 25px;
@@ -92,76 +92,36 @@
       line-height: 1.6;
     }
 
-    /* ===== MENSAJE DESCARGA ===== */
-    .descarga {
-      max-width: 800px;
-      margin: 20px auto 40px;
-      background-color: #f1faee;
-      padding: 20px;
-      border-radius: 12px;
+    /* ===== VIDEO ===== */
+    .video-section {
       text-align: center;
-      color: #1d3557;
-      font-weight: bold;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      margin: 40px auto;
+      max-width: 900px;
     }
 
-    /* ===== GRID DE AUDIOLIBROS ===== */
-    .audiolibros-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-      max-width: 1200px;
-      margin: 0 auto 60px;
-      padding: 0 20px;
-    }
-
-    .card {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      text-align: center;
-      transition: transform 0.25s, box-shadow 0.25s;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-    }
-
-    .card h3 {
-      margin-top: 0;
-      color: #1d3557;
-    }
-
-    .card p {
-      flex: 1;
-      color: #555;
-      margin-bottom: 15px;
-    }
-
-    .card audio {
+    .video-section iframe {
       width: 100%;
-      outline: none;
+      height: 480px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      border: none;
     }
 
-    .download-btn {
-      display: inline-block;
-      margin-top: 12px;
-      padding: 10px 18px;
-      background-color: #1d3557;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background-color 0.3s;
+    /* ===== ARTÍCULO ===== */
+    .article {
+      max-width: 900px;
+      margin: 40px auto 60px;
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      line-height: 1.7;
+      color: #444;
     }
 
-    .download-btn:hover {
-      background-color: #457b9d;
+    .article h3 {
+      color: #1d3557;
+      margin-top: 0;
     }
 
     /* ===== FOOTER ===== */
@@ -174,8 +134,8 @@
 
     /* Responsive */
     @media (max-width: 600px) {
-      nav { padding: 8px 12px; }
-      .intro, .descarga { margin: 20px; padding: 18px; }
+      .intro, .article { margin: 20px; padding: 18px; }
+      .video-section iframe { height: 260px; }
     }
   </style>
 </head>
@@ -191,6 +151,7 @@
         <li><a href="index.html">Inicio</a></li>
         <li><a href="podcast.html">Podcast</a></li>
         <li><a href="foro.html">Foros</a></li>
+        <li><a href="audiolibros.html">Audiolibros</a></li>
         <li><a href="mision-vision.html">Misión y Visión</a></li>
       </ul>
     </nav>
@@ -198,49 +159,43 @@
 
   <!-- ===== INTRO ===== -->
   <div class="intro">
-    <h2>Descubre nuestros Audiolibros</h2>
+    <h2>Cuidados Paliativos</h2>
     <p>
-      En <strong>Vitalis I.P.S</strong> queremos acompañarte en tu bienestar emocional. 
-      Aquí encontrarás audiolibros diseñados para tu crecimiento personal y equilibrio interior.
+      En <strong>Vitalis I.P.S</strong> comprendemos la importancia de los cuidados paliativos como un pilar
+      fundamental en la atención integral de los niños y niñas con leucemia.  
+      Estos cuidados buscan aliviar el sufrimiento físico, emocional y espiritual, 
+      promoviendo la calidad de vida tanto del paciente como de su familia.
     </p>
   </div>
 
-  <!-- ===== MENSAJE DESCARGA ===== -->
-  <div class="descarga">
-    📥 Descarga estos audiolibros para disfrutarlos sin conexión
+  <!-- ===== VIDEO ===== -->
+  <div class="video-section">
+    <h2 style="color:#1d3557;">Video informativo</h2>
+    <iframe 
+      src="https://www.youtube.com/embed/1VaYB5L4z0s" 
+      title="Video sobre cuidados paliativos" 
+      allowfullscreen>
+    </iframe>
   </div>
 
-  <!-- ===== LISTA DE AUDIOLIBROS ===== -->
-  <div class="audiolibros-grid">
-    <div class="card">
-      <h3>Audiolibro 1: El poder de la mente</h3>
-      <p>Un recorrido por técnicas y reflexiones sobre cómo entrenar tu mente para alcanzar mayor paz interior.</p>
-      <audio controls>
-        <source src="audios/audiolibro1.mp3" type="audio/mpeg">
-        Tu navegador no soporta el reproductor de audio.
-      </audio>
-      <a href="audios/audiolibro1.mp3" download class="download-btn">⬇ Descargar</a>
-    </div>
-
-    <div class="card">
-      <h3>Audiolibro 2: Resiliencia</h3>
-      <p>Historias y estrategias para aprender a superar las dificultades y crecer en el proceso.</p>
-      <audio controls>
-        <source src="audios/audiolibro2.mp3" type="audio/mpeg">
-        Tu navegador no soporta el reproductor de audio.
-      </audio>
-      <a href="audios/audiolibro2.mp3" download class="download-btn">⬇ Descargar</a>
-    </div>
-
-    <div class="card">
-      <h3>Audiolibro 3: Mindfulness para principiantes</h3>
-      <p>Una introducción práctica al mindfulness, perfecta para quienes quieren empezar a vivir el presente.</p>
-      <audio controls>
-        <source src="audios/audiolibro3.mp3" type="audio/mpeg">
-        Tu navegador no soporta el reproductor de audio.
-      </audio>
-      <a href="audios/audiolibro3.mp3" download class="download-btn">⬇ Descargar</a>
-    </div>
+  <!-- ===== ARTÍCULO ===== -->
+  <div class="article">
+    <h3>Artículo: El valor humano de los cuidados paliativos</h3>
+    <p>
+      Los cuidados paliativos no se enfocan únicamente en el tratamiento médico, sino en 
+      el acompañamiento compasivo que atiende las necesidades emocionales, sociales y espirituales
+      de los pacientes y sus familias.  
+    </p>
+    <p>
+      En el contexto pediátrico, la atención paliativa implica una comunicación constante,
+      un ambiente de apoyo y la integración de los padres como parte activa del proceso.
+      También favorece el bienestar psicológico del cuidador, ayudando a enfrentar la carga emocional 
+      asociada con el proceso de enfermedad.
+    </p>
+    <p>
+      En <strong>Vitalis I.P.S</strong> creemos que el cuidado humano es esencial, y por eso
+      promovemos un acompañamiento interdisciplinario centrado en la empatía y la esperanza.
+    </p>
   </div>
 
   <!-- ===== FOOTER ===== -->
@@ -250,4 +205,3 @@
 
 </body>
 </html>
-
