@@ -113,6 +113,126 @@
       margin-top: 50px;
       color: #1d3557;
     }
+
+    /* ===== CHATBOT ===== */
+    #chatbot-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    #chatbot-button {
+      width: 60px;
+      height: 60px;
+      background-color: #457b9d;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      font-size: 24px;
+      transition: transform 0.3s;
+    }
+
+    #chatbot-button:hover {
+      transform: scale(1.1);
+      background-color: #1d3557;
+    }
+
+    #chatbot-window {
+      display: none;
+      position: absolute;
+      bottom: 80px;
+      right: 0;
+      width: 300px;
+      height: 400px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      overflow: hidden;
+      flex-direction: column;
+    }
+
+    #chatbot-header {
+      background-color: #a8dadc;
+      color: #1d3557;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    #chatbot-header img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: white;
+      margin-right: 8px;
+    }
+
+    #chatbot-header h3 {
+      margin: 0;
+      font-size: 16px;
+      flex-grow: 1;
+    }
+
+    #chatbot-close {
+      background: none;
+      border: none;
+      color: #1d3557;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    #chatbot-messages {
+      flex: 1;
+      padding: 10px;
+      overflow-y: auto;
+      font-size: 14px;
+    }
+
+    .bot-message, .user-message {
+      background: #f1f1f1;
+      padding: 8px 10px;
+      border-radius: 10px;
+      margin: 6px 0;
+      max-width: 80%;
+    }
+
+    .bot-message {
+      background: #e6f2ff;
+      align-self: flex-start;
+    }
+
+    .user-message {
+      background: #d1f5d3;
+      align-self: flex-end;
+      text-align: right;
+    }
+
+    #chatbot-input-area {
+      display: flex;
+      border-top: 1px solid #ccc;
+    }
+
+    #chatbot-input {
+      flex: 1;
+      border: none;
+      padding: 10px;
+      outline: none;
+    }
+
+    #chatbot-send {
+      background-color: #457b9d;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -167,8 +287,87 @@
   <footer>
     <p>© 2025 Vitalis I.P.S - Todos los derechos reservados</p>
   </footer>
+ 
+  <!-- ===== CHATBOT ===== -->
+  <div id="chatbot-container">
+    <div id="chatbot-button">💬</div>
+
+    <div id="chatbot-window">
+      <div id="chatbot-header">
+        <img id="chatbot-logo" src="IMAGENES/headlogo.png" alt="Vitalis I.P.S" />
+        <h3>Asistente Vitalis</h3>
+        <button id="chatbot-close">&times;</button>
+      </div>
+      <div id="chatbot-messages">
+        <div class="bot-message">
+          👋 ¡Hola! Soy el asistente de <b>Vitalis I.P.S</b>.<br>
+          Puedo acompañarte en temas relacionados con <b>ansiedad</b> y <b>estrés</b>.  
+          ¿Cómo te sientes hoy?
+        </div>
+      </div>
+      <div id="chatbot-input-area">
+        <input type="text" id="chatbot-input" placeholder="Escribe tu mensaje..." />
+        <button id="chatbot-send">Enviar</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const chatbotBtn = document.getElementById('chatbot-button');
+    const chatbotWindow = document.getElementById('chatbot-window');
+    const chatbotClose = document.getElementById('chatbot-close');
+    const chatbotSend = document.getElementById('chatbot-send');
+    const chatbotInput = document.getElementById('chatbot-input');
+    const chatbotMessages = document.getElementById('chatbot-messages');
+
+    chatbotBtn.addEventListener('click', () => {
+      chatbotWindow.style.display = 'flex';
+      chatbotBtn.style.display = 'none';
+    });
+
+    chatbotClose.addEventListener('click', () => {
+      chatbotWindow.style.display = 'none';
+      chatbotBtn.style.display = 'flex';
+    });
+
+    chatbotSend.addEventListener('click', sendMessage);
+    chatbotInput.addEventListener('keypress', e => {
+      if (e.key === 'Enter') sendMessage();
+    });
+
+    function sendMessage() {
+      const text = chatbotInput.value.trim();
+      if (!text) return;
+      addMessage(text, 'user');
+      chatbotInput.value = '';
+      setTimeout(() => botReply(text), 600);
+    }
+
+    function addMessage(text, sender) {
+      const msg = document.createElement('div');
+      msg.classList.add(sender === 'bot' ? 'bot-message' : 'user-message');
+      msg.innerHTML = text;
+      chatbotMessages.appendChild(msg);
+      chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    }
+
+    function botReply(text) {
+      let reply = "";
+      const lower = text.toLowerCase();
+
+      if (lower.includes("ansiedad")) {
+        reply = "La ansiedad puede aparecer en momentos difíciles. Intenta respirar profundo, descansar y buscar apoyo si lo necesitas.";
+      } else if (lower.includes("estrés")) {
+        reply = "El estrés es común, pero si se prolonga puede afectar tu bienestar. Las pausas activas, el ejercicio suave y hablar con alguien de confianza pueden ayudarte.";
+      } else if (lower.includes("hola") || lower.includes("buenas")) {
+        reply = "¡Hola! ¿Cómo te sientes hoy respecto al estrés o la ansiedad?";
+      } else {
+        reply = "Puedo hablar contigo sobre ansiedad o estrés. Cuéntame, ¿qué situación te está preocupando?";
+      }
+
+      addMessage(reply, 'bot');
+    }
+  </script>
 
 </body>
 </html>
-
-
