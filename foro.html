@@ -13,7 +13,7 @@
       position: relative;
     }
 
-     /* === Marca de agua con el logo === */
+    /* === Marca de agua con el logo === */
     body::before {
       content: "";
       position: fixed;
@@ -45,12 +45,6 @@
       padding: 10px 20px;
     }
 
-    nav img {
-      height: 50px;
-      display: block;
-      cursor: pointer;
-    }
-
     nav ul {
       list-style: none;
       margin: 0;
@@ -70,6 +64,13 @@
 
     nav ul li a:hover {
       background-color: #f1faee;
+    }
+
+    /* === Logo corregido === */
+    .logo {
+      height: 55px;
+      width: auto;
+      display: block;
     }
     
     /* ===== MAIN ===== */
@@ -149,8 +150,8 @@
     }
 
     .card .btn:hover {
-      background-color: #457b9d; /* efecto hover original */
-      color: white; /* texto blanco al pasar el ratón */
+      background-color: #457b9d;
+      color: white;
     }
 
     .publicar {
@@ -189,7 +190,7 @@
     }
 
     .publicar button:hover {
-      background-color: #457b9d; /* igual que el hover original */
+      background-color: #457b9d;
       color: white;
     }
 
@@ -201,8 +202,8 @@
       margin-top: 10px;
       color: #1d3557;
     }
-    
-      /* ===== CHATBOT ===== */
+
+    /* ===== CHATBOT ===== */
     #chatbot-container {
       position: fixed;
       bottom: 20px;
@@ -327,10 +328,10 @@
 
   <!-- ===== HEADER ===== -->
   <header>
-    <a href="index.html">
-      <img src="IMAGENES/headlogo.png" alt="Logo Vitalis I.P.S">
-    </a>
     <nav>
+      <a href="index.html">
+        <img class="logo" src="IMAGENES/headlogo.png" alt="Logo Vitalis I.P.S">
+      </a>
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="podcast.html">Podcast</a></li>
@@ -472,6 +473,7 @@
 
 </body>
 </html>
+
 
 
 
